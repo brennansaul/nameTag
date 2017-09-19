@@ -33,7 +33,7 @@ while True:
   #screen.update()
 
   # wait for 15 seconds
-  time.sleep(10)
+  time.sleep(15)
 
   # 2 Display Hobbies and Interests 10 seconds
 
@@ -44,7 +44,7 @@ while True:
   #screen.partial_update()
 
   # wait for 15 seconds
-  time.sleep(10)
+  time.sleep(15)
 
   # Time Display 
   #t = datetime.datetime.now()
