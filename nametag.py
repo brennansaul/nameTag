@@ -13,7 +13,7 @@ import ImageFont
 
 from papirus import Papirus
 from papirus import PapirusImage
-from papirus import PapirusTextPos
+from papirus import PapirusComposite
 
 import datetime
 
@@ -47,10 +47,27 @@ while True:
   time.sleep(10)
 
   # Time Display 
+  #t = datetime.datetime.now()
+  #timeString = t.strftime("%H:%M")
+  #image.write('./Basenametagbox.png')
+  #text.AddText(timeString, 150, 80, Id="Start")
+  
+  # Calling PapirusComposite this way will mean nothing is written to the screen until WriteAll is called
+  textNImg = PapirusComposite(False, 0)
+  
+  # String storing time data
   t = datetime.datetime.now()
   timeString = t.strftime("%H:%M")
-  image.write('./Basenametagbox.png')
-  text.AddText(timeString, 150, 80, Id="Start")
+  
+  # Write text to the screen at selected point, with an Id
+  # Nothing will show on the screen
+  textNImg.AddText(timeString, 150, 30, Id="time" )
+
+  # Add image with default layout
+  textNImg.AddImg("./Basenametagbox.png", Id="NameLogo")
+  
+  # Now display all elements on the scrren
+  textNImg.WriteAll()
   
   time.sleep(10)
   text.Clear()
