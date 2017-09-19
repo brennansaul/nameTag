@@ -4,9 +4,6 @@ import time
 import sys 
 import os
 
-
-from datetime import datetime
-
 import Image
 import ImageDraw
 import ImageFont
@@ -19,33 +16,26 @@ import datetime
 
 # Set Screen rotation
 # Optional rotation argument: rot = 0, 90, 180 or 270
-#screen = Papirus(0)
 image = PapirusImage(180)
-text = PapirusTextPos(180)
+
 
 #Display loop
 while True:
   # 1 Original Screen Major / Minor / Graduation displays for 15 seconds
-  # Write a bitmap to the epaper screen
+  # Write image to the epaper screen
   image.write('./nametagmajorbox.png')
 
-  # Update only the changed pixels (faster)
-  #screen.update()
-
-  # wait for 15 seconds
-  time.sleep(15)
+  # Wait / display for 15 seconds
+  #time.sleep(15)
+  time.sleep(3) # For dev
 
   # 2 Display Hobbies and Interests 10 seconds
-
-  # Write a bitmap to the epaper screen
+  # Write image to the epaper screen
   image.write('./factsnametagbox.png')
 
-  # Update only the changed pixels (faster)
-  #screen.partial_update()
-
-  # wait for 15 seconds
-  time.sleep(15)
-
+  # Wait / display for 15 seconds
+  #time.sleep(15)
+  time.sleep(3) # For Dev
   # Time Display 
   #t = datetime.datetime.now()
   #timeString = t.strftime("%H:%M")
@@ -53,21 +43,22 @@ while True:
   #text.AddText(timeString, 150, 80, Id="Start")
   
   # Calling PapirusComposite this way will mean nothing is written to the screen until WriteAll is called
-  textNImg = PapirusComposite(False, 0)
+  textNImg = PapirusComposite(False, 180)
   
   # String storing time data
   t = datetime.datetime.now()
-  timeString = t.strftime("%H:%M")
-  
+  timeString = t.strftime("%I:%M %p")
+  dateString = t.strftime("%a %b %d")
   # Write text to the screen at selected point, with an Id
   # Nothing will show on the screen
-  textNImg.AddText(timeString, 150, 30, Id="time" )
-
+  #textNImg.AddText(timeString, 80, 30, Id="time")
+  #textNImg.AddText(dateString, 80, 25, Id="date")
   # Add image with default layout
-  textNImg.AddImg("./Basenametagbox.png", Id="NameLogo")
-  
+  textNImg.AddImg("./Basenametagbox.png", 0, 0, (200, 96), Id="NameLogo")
+  textNImg.AddText(dateString, 65, 20, Id="date")
+  textNImg.AddText(timeString, 65, 40, Id="time")
+
   # Now display all elements on the scrren
   textNImg.WriteAll()
   
-  time.sleep(10)
-  text.Clear()
+  time.sleep(3)
