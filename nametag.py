@@ -3,7 +3,7 @@
 import time
 import sys 
 import os
-import smbus
+
 
 from datetime import datetime
 
@@ -13,13 +13,15 @@ import ImageFont
 
 from papirus import Papirus
 from papirus import PapirusImage
+from papirus import PapirusTextPos
 
-import time
+import datetime
 
 # Set Screen rotation
 # Optional rotation argument: rot = 0, 90, 180 or 270
 #screen = Papirus(0)
 image = PapirusImage(180)
+text = PapirusTextPos(180)
 
 #Display loop
 while True:
@@ -45,3 +47,10 @@ while True:
   time.sleep(10)
 
   # Time Display 
+  t = datetime.datetime.now()
+  timeString = t.strftime("%H:%M")
+  image.write('./Basenametagbox.png')
+  text.AddText(timeString, 150, 80, Id="Start")
+  
+  time.sleep(10)
+  text.Clear()
