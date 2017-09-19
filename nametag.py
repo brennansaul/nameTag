@@ -10,7 +10,7 @@ screen = Papirus([rotation = 0])
 while True:
   # 1 Original Screen Major / Minor / Graduation displays for 15 seconds
   # Write a bitmap to the epaper screen
-  screen.display('./')
+  screen.display('./nametagmajorbox.png')
 
   # Update only the changed pixels (faster)
   screen.update()
