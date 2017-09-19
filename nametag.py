@@ -7,7 +7,7 @@ screen = Papirus([rotation = 0])
 
 
 #Display loop
-while True:
+#while True:
   # 1 Original Screen Major / Minor / Graduation displays for 15 seconds
   # Write a bitmap to the epaper screen
   screen.display('./nametagmajorbox.png')
@@ -16,17 +16,17 @@ while True:
   screen.update()
 
   # wait for 15 seconds
-  time.sleep(.1)
+  time.sleep(10)
 
   # 2 Display Hobbies and Interests 10 seconds
 
   # Write a bitmap to the epaper screen
-  screen.display('./')
+  screen.display('./factsnametagbox.png')
 
   # Update only the changed pixels (faster)
   screen.partial_update()
 
   # wait for 15 seconds
-  time.sleep(.1)
+  time.sleep(1)
 
   # Time Display 
