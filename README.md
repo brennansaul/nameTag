@@ -35,26 +35,19 @@ A do it yourself project that will turn heads at you next job fair. The Dynamic 
   $ papirus-test
   ```
 
-## Create youre desired displayes
+## Create youre desired displays
 This is your chance to be creative! Using whatever paint-type program you have in mind create your own name badge. 
 Before you start there are some things to keep in mind! The dimentions of the papirus screen is **200x96 pixels**, so before you start creating you display set your canvas to those dimentions. The ink display shows only two colors: white and black. 
 
 Here are the name badge displays that I created on my mac using [PaintBrush](https://paintbrush.sourceforge.io/), a free microsoft paint like software.
 
-#### Base name tag:
-In order to have a consistent base display I created this image first and then created duplicates that I added information too. I also used this image so that I styled canvas for displaying system information such as date and time.
+### Examples:
+In order to have a consistent base display I created this image first and then created duplicates that I added information too. I also used this image so that I styled canvas for displaying system information such as date and time.  
 
 ![Base name tag picture not found!](https://github.com/brennansaul/nameTag/blob/master/Basenametagbox.png)
-
-#### Education information:
-In order to have a consistent base display I created this image first and then created duplicates that I added information too. I also used this image so that I styled canvas for displaying system information such as date and time.
-
-![Base name tag picture not found!](https://github.com/brennansaul/nameTag/blob/master/nametagmajorbox.png)
-
-#### Interests and Hobbies:
-In order to have a consistent base display I created this image first and then created duplicates that I added information too. I also used this image so that I styled canvas for displaying system information such as date and time.
-
+![Base name tag picture not found!](https://github.com/brennansaul/nameTag/blob/master/nametagmajorbox.png)  
 ![Base name tag picture not found!](https://github.com/brennansaul/nameTag/blob/master/factsnametagbox.png)
+
  
 
 
