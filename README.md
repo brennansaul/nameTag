@@ -7,3 +7,12 @@ A do it yourself project that will turn heads at you next job fair. The Dynamic 
 - [Raspberry Pi Zero W Budget Pack](https://www.adafruit.com/product/3400)
 - [PaPiRus 2 inch ink display](https://www.adafruit.com/product/3335)
 - Solder and Wire (Used to attach GPIO pins)
+
+## Prepare Your Raspberry Pi Zero W
+1. Install flash image of either Raspbian Jessie or Jessie Lite to your SD card.
+2. Configure your pi: keyboard, locale, time, wifi
+3. In the terminal update your Raspberry Pi with the following commands:
+  ```
+  $ apt-get update
+  $ apt-get upgrade
+  ```
