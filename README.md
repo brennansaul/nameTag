@@ -42,11 +42,80 @@ Before you start there are some things to keep in mind! The dimentions of the pa
 Here are the name badge displays that I created on my mac using [PaintBrush](https://paintbrush.sourceforge.io/), a free microsoft paint like software.
 
 ### Examples:
-In order to have a consistent base display I created this image first and then created duplicates that I added information too. I also used this image so that I styled canvas for displaying system information such as date and time.  
+In order to have a consistent display I created a base image first, then I created duplicates of that base image and added the desired information for each display. I also used this image for displaying system information such as date and time.  
 
 ![Base name tag picture not found!](https://github.com/brennansaul/nameTag/blob/master/Basenametagbox.png)
 ![Base name tag picture not found!](https://github.com/brennansaul/nameTag/blob/master/nametagmajorbox.png)  
 ![Base name tag picture not found!](https://github.com/brennansaul/nameTag/blob/master/factsnametagbox.png)
+
+## Make a Project Repository
+- Log into github and create a project repository. 
+- Name the project whatever you like and initialize the repository with a read me.
+- Upload your display images to the repository.
+- Create a new file called `nametag.py` copy and past code below into file.
+    
+    ``` 
+    #!/usr/bin/python
+
+    import time
+    import sys 
+    import os
+    import smbus
+    import RPi.GPIO as GPIO
+    import datetime
+
+    import Image
+    import ImageDraw
+    import ImageFont
+
+    from papirus import Papirus
+    from papirus import PapirusImage
+    from papirus import PapirusComposite
+
+    # Set Screen rotation
+    # Optional rotation argument: rot = 0, 90, 180 or 270
+    image = PapirusImage(180)
+    
+    # Loops through displays infinitely
+    while True:
+      # 1 Original Screen Major / Minor / Graduation displays for 15 seconds
+      # Write image to the epaper screen
+      image.write('path-of-your-file')
+
+      # Wait / display for 15 seconds
+      time.sleep(15)
+      #time.sleep(3) # For Dev so you don't have to wait as long 
+
+      # 2 Display Hobbies and Interests 15 seconds
+      # Write image to the epaper screen
+      image.write('path-of-your-file')
+
+      # Wait / display for 10 seconds
+      time.sleep(10)
+      #time.sleep(3) # For Dev so you don't have to wait as long 
+
+      # 3 Display Time and Date 10 seconds 
+      # Calling PapirusComposite this way will mean nothing is written to the screen until WriteAll is called
+      textNImg = PapirusComposite(False, 180)
+
+      # String storing time and data into respective strings
+      t = datetime.datetime.now()
+      timeString = t.strftime("%I:%M %p")
+      dateString = t.strftime("%a %b %d")
+
+      # Add image with default layout date text and time text
+      textNImg.AddImg("path-of-your-file", 0, 0, (200, 96), Id="NameLogo")
+      textNImg.AddText(dateString, 65, 20, Id="date")
+      textNImg.AddText(timeString, 65, 40, Id="time")
+
+      # Now display all elements on the scrren
+      textNImg.WriteAll()
+
+      time.sleep(10)
+      #time.sleep(3) # For Dev so you don't have to wait as long 
+  ```
+
+
 
  
 
