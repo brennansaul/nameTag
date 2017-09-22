@@ -49,10 +49,10 @@ In order to have a consistent display I created a base image first, then I creat
 ![Base name tag picture not found!](https://github.com/brennansaul/nameTag/blob/master/factsnametagbox.png)
 
 ## Make a Project Repository
-- Log into github and create a project repository. 
-- Name the project whatever you like and initialize the repository with a read me.
-- Upload your display images to the repository.
-- Create a new file called `nametag.py` copy and past code below into file.
+1. Log into github and create a project repository. 
+2. Name the project whatever you like and initialize the repository with a read me.
+3. Upload your display images to the repository.
+4. Create a new file called `nametag.py` copy and past code below into file and commit change.
     
     ``` 
     #!/usr/bin/python
@@ -114,6 +114,16 @@ In order to have a consistent display I created a base image first, then I creat
       time.sleep(10)
       #time.sleep(3) # For Dev so you don't have to wait as long 
   ```
+5. Pull reposity onto you Raspberry Pi
+6. Set the path for your display images in `nametag.py`
+7. Navigate to project directory and give executable permissions to your python script 
+  
+  ```
+  $ cd your-repository-location
+  $ chmod +x nametag.py
+  ```
+  
+8. ......
 
 
 
