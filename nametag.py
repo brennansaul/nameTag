@@ -3,6 +3,9 @@
 import time
 import sys 
 import os
+import smbus
+import RPi.GPIO as GPIO
+import datetime
 
 import Image
 import ImageDraw
@@ -12,14 +15,12 @@ from papirus import Papirus
 from papirus import PapirusImage
 from papirus import PapirusComposite
 
-import datetime
-
 # Set Screen rotation
 # Optional rotation argument: rot = 0, 90, 180 or 270
 image = PapirusImage(180)
 
 
-#Display loop
+# Loops through displays infinitely
 while True:
   # 1 Original Screen Major / Minor / Graduation displays for 15 seconds
   # Write image to the epaper screen
