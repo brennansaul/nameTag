@@ -114,6 +114,7 @@ In order to have a consistent display I created a base image first, then I creat
       time.sleep(10)
       #time.sleep(3) # For Dev so you don't have to wait as long 
   ```
+  
 5. Pull reposity onto you Raspberry Pi
 6. Set the path for your display images in `nametag.py`
 7. Navigate to project directory and give executable permissions to your python script 
