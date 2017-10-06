@@ -1,6 +1,8 @@
 # The Dynamic Name Tag 
 
-Video of the name tag!
+![Photo of name tag did not load](https://github.com/brennansaul/nameTag/blob/master/Photo%20Oct%2006%2C%201%2020%2047%20AM_preview.jpeg)
+
+*Click the image below to view a video of the Dynamic Name Tag!*
 
 [![Video of Dynamic Name Tag](https://img.youtube.com/vi/lex6oVufuSE/2.jpg)](https://youtu.be/lex6oVufuSE)
 
