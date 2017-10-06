@@ -1,5 +1,8 @@
 # The Dynamic Name Tag 
 
+Video of the name tag!
+
+[![Video of Dynamic Name Tag](https://img.youtube.com/vi/lex6oVufuSE/2.jpg)](https://youtu.be/lex6oVufuSE)
 
 
 ## Overview:
