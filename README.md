@@ -1,5 +1,7 @@
 # The Dynamic Name Tag 
 
+
+
 ## Overview:
 A do it yourself project that will turn heads at you next job fair. The Dynamic Name Tag uses a Raspberry Pi Zero W and the 2" PaPiRus ink display in order to create a name tag that will change the information displayed every x seconds.
 
@@ -7,7 +9,7 @@ A do it yourself project that will turn heads at you next job fair. The Dynamic 
 - [Raspberry Pi Zero W Budget Pack](https://www.adafruit.com/product/3400)
 - [PaPiRus 2 inch ink display](https://www.adafruit.com/product/3335)
 - Solder and Wire (Used to attach GPIO pins) or purchase hammer in GPIO pins
-- Velcrow stick stick strips
+- Velcrow stick strips used to attach name tag to your shirt or jacket
 - Portable USB charger
 
 ## Assemble 
@@ -80,7 +82,7 @@ In order to have a consistent display I created a base image first, then I creat
     while True:
       # 1 Original Screen Major / Minor / Graduation displays for 15 seconds
       # Write image to the epaper screen
-      image.write('path-of-your-file')
+      image.write('full-path-of-your-file')
 
       # Wait / display for 15 seconds
       time.sleep(15)
@@ -124,10 +126,11 @@ In order to have a consistent display I created a base image first, then I creat
   $ chmod +x nametag.py
   ```
   
-8. ......
+8. To run your python script use the command `$ python nametag.py`
+9. In order for the nametag program to run at start up open `/etc/local.rc` with your prefered text-editor and add the command `$ python /full-path-to/nametag.py &` to the file. **Because our script runs continuosly we add the `&` to run the program in the background**
 
+<hr>
 
-
- 
-
-
+## References 
+- [PaPiRus Ink Display API Documentation](https://github.com/PiSupply/PaPiRus)
+- [Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/linux/usage/rc-local.md)
