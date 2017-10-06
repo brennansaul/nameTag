@@ -8,7 +8,14 @@
 
 
 ## Overview:
-A do it yourself project that will turn heads at you next job fair. The Dynamic Name Tag uses a Raspberry Pi Zero W and the 2" PaPiRus ink display in order to create a name tag that will change the information displayed every x seconds.
+
+“The Dynamic Name Tag” is a device that shares more than just your name with the people you are meeting. You can share your interests, achievements, hobbies, contact information, even the current date and time. 
+
+The name tag is a Raspberry Pi Zero W equipped with with a 2 inch PaPiRus ink display and is powered by an ordinary phone charger. 
+
+This is a fun DIY project that will turn heads at your next job fair and  expose you to programming with single board computers such as Raspberry Pis.  
+
+
 
 ## Materials
 - [Raspberry Pi Zero W Budget Pack](https://www.adafruit.com/product/3400)
