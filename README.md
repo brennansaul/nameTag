@@ -9,11 +9,11 @@
 
 ## Overview:
 
-“The Dynamic Name Tag” is a device that shares more than just your name with the people you are meeting. You can share your interests, achievements, hobbies, contact information, even the current date and time. 
+“The Dynamic Name Tag” is a device that shares more than just your name with the people you are with. You can share your interests, achievements, hobbies, contact information, even the current date and time. Your creativity is the limit of what you can do! 
 
 The name tag is a Raspberry Pi Zero W equipped with with a 2 inch PaPiRus ink display and is powered by an ordinary phone charger. 
 
-This is a fun DIY project that will turn heads at your next job fair and  expose you to programming with single board computers such as Raspberry Pis.  
+This is a fun DIY project that will turn heads at your next job fair and expose you to programming with single board computers such as Raspberry Pis.  
 
 
 
@@ -23,6 +23,7 @@ This is a fun DIY project that will turn heads at your next job fair and  expose
 - Solder and Wire (Used to attach GPIO pins) or purchase hammer in GPIO pins
 - Velcrow stick strips used to attach name tag to your shirt or jacket
 - Portable USB charger
+- Mouse, Keyboard, and Monitor (for programming)
 
 ## Assemble 
 
